@@ -40,9 +40,9 @@ app.use('/api', apiRoutes);
 
 
 // client
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'react', 'dist')));
 app.get('*', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'react', 'dist', 'index.html'));
 });
 
 
