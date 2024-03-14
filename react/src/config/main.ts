@@ -1,6 +1,6 @@
-export const ApiBaseUrl: string = "http://localhost:8000/api";
+export const ApiBaseUrl: string = "/api";
 
-export const SocketBaseUrl: string = "http://localhost:8000"
+export const SocketBaseUrl: string = ""
 
 export const brand: string = "My Ride";
 
