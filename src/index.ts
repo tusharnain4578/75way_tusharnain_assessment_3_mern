@@ -14,7 +14,7 @@ import { corsConfig, socketCorsConfig } from "./config/cors"
 import { Server, Socket } from "socket.io"
 import initializeDriverSockets from "./sockets/driver.socket"
 import initializeCustomerSockets from "./sockets/customer.socket"
-import "./typesdeclaration"
+import "./typeD"
 configDotenv()
 
 const expressPort: number = Number(process.env.EXPRESS_PORT) || 8000

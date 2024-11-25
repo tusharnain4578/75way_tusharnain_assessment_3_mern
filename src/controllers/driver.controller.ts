@@ -2,7 +2,6 @@ import { Request, Response } from "express"
 import { RequestRegisterVehicleData } from "../types/request-data.types"
 import User, { IUser } from "../models/user.model"
 import Joi from "joi"
-import assertRequestHasUser from "../types/types"
 export default class {
   public static registerVehicle = async (
     req: Request,
@@ -11,13 +10,11 @@ export default class {
     const { vehicle, status }: RequestRegisterVehicleData = req.body
     const data: RequestRegisterVehicleData = { vehicle, status }
     //check-----start
-    //damna method 1
-    assertRequestHasUser(req)
+    //damna method 2
 
     //req.user is coming hser
-
-    req.user
-
+    // req.user
+    req.user?.fullName
     //check-----end
     const { error } = Joi.object({
       vehicle: Joi.string().valid("bike", "car").required(),
